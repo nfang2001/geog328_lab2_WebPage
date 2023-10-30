@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>See also</title>
+
+    <!-- Including the main.css file for styling -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Including the Font Awesome CSS library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+    
+    .active, .accordion:hover {
+      background-color: #ccc; 
+    }
+    
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+    }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <div class="topnav" id="myTopnav">
+        <!-- Links to different sections -->
+        <a href="index.html">Abstract</a>
+        <a href="section1.html">Section 1</a>
+        <a href="section2.html">Section 2</a>
+        <a href="section3.html">Section 3</a>
+
+        <!-- Active link pointing to the see_also.html page -->
+        <a class="active" href="see_also.html">See Also</a>
+
+        <a href="references.html">References</a>
+
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links on smaller screens -->
+        <a href="javascript:void(0);" class="icon">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Page content -->
+    <div class="content">
+        <!-- See Also section content -->
+        <h2>See Also:</h2>
+        <br>
+        <button class="accordion">Resource 1</button>
+        <div class="panel">
+          <p>Top Travel Destinations for 2024
+          <br>(https://nypost.com/2023/08/15/the-top-travel-destinations-for-2024-revealed/)
+          </br>
+          </p>
+        </div>
+        
+        <button class="accordion">Resource 2</button>
+        <div class="panel">
+          <p>Latest global outlooks for air travel in 2024
+          <br>(https://aci.aero/2023/09/27/latest-air-travel-outlook-reveals-2024-to-be-a-milestone-for-global-passenger-traffic/)
+          </br>
+          </p>
+        </div>
+        
+        <button class="accordion">Resource 3</button>
+        <div class="panel">
+          <p>Top Travel hacks for 2024
+          <br>(https://www.expedia.com/newsroom/air-travel-hacks-2024/)
+          </br>
+          </p>
+        </div>
+        
+        <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+        </script>
+
+    </div>
+
+    <!-- Including the main.js file for JavaScript functionality -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
